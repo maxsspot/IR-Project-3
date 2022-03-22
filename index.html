@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap" rel="stylesheet">
+		<title>Page Title</title>
+	</head>
+	<body>
+        <div id = "instruction">
+            <br>
+            <h2>INSTRUCTION MANUAL</h2>
+            <p>Welcome to this choose your own adventure game! Progress through this game as if you were actually in the book! The setting and plot also could be found in this game. And since this is a choose your own adventure game there really isn't any rules!</p>
+            <a onclick = "closeman()">I understand, let's play!</a>
+        </div>
+        <br>
+        <br>
+        <div id = "beforeschool">
+        <div id = "first">
+            <h2>How will you get to school?</h2>
+            <br>
+            <button onclick = "next1()">Bike to school</button>
+            <button onclick = "bus()">Take the bus</button>
+        </div>
+        <div id = "bike">
+            <h2>You see your bullies. You can:</h2>
+            <br>
+            <button onclick = "bikeignore()">Ignore them</button>
+            <button onclick = "bikecry()">Start crying</button>
+        </div>
+        <div id = "bikecry">
+            <h2>You made a fool of yourself.<br>Now what?</h2>
+            <br>
+            <button onclick = "bikegameover()">Break down</button>
+            <button onclick = "biketocry()">Bike to school crying</button>
+        </div>
+
+        <div id = "bikeignore">
+            <h2>Good job!<br>Now you are at school.</h2>
+            <br>
+            <button onclick = "schoolfirst()">Go to first period.</button>
+        </div>
+        <div id = "bikegameover">
+            <h2>GAME OVER</h2>
+            <br>
+            <i class="fas fa-angry fa-5x"></i>
+            <br>
+            <br>
+            <p>You had a breakdown.</p>
+            <a onclick = "location.reload()">Try again <i class="fas fa-redo" id = "redo"></i></a>
+        </div>
+        <div id = "bus">
+            <h2>People on the bus call you 'big-boned'.</h2>
+            <br>
+            <button onclick = "busignore()">Ignore them</button>
+            <button onclick = "snitch()">Tell the bus driver</button>
+        </div>
+        <div id = "snitch">
+            <h2>The bus driver yell's at the kids when they get to school. Now you:</h2>
+            <br>
+            <button onclick = "schoolfirst()">Go to first period</button>
+        </div>
+        <div id = "busignore">
+            <h2>You arrive at school.</h2>
+            <br>
+            <button onclick = "schoolfirst()">Go to first period</button>
+        </div>
+        <div id = "schoolcry">
+            <h2>You arrive at school crying.</h2>
+            <br>
+            <button onclick = "schoolfirst()">Go to first period.</button>
+        </div>
+        </div>
+        <div id = "inschool">
+            <div id = "schoolfirst">
+            <h2>What will you do to pass the time?</h2>
+            <br>
+            <button onclick = "attent()">Pay attention</button>
+            <button onclick = "attentno()">Don't pay attention</button>
+            </div>
+            <div id = "attentiongameover">
+            <h2>GAME OVER</h2>
+            <br>
+            <i class="fas fa-angry fa-5x"></i>
+            <br>
+            <br>
+            <p>You failed the class.</p>
+            <a onclick = "location.reload()">Try again <i class="fas fa-redo" id = "redo"></i></a>
+            </div>
+            <div id = "attention">
+            <h2>The day is over.<br>Go to Donut Shop.</h2>
+            <br>
+            <button onclick = "donut()">Donut Shop</button>
+            </div>
+        </div>
+        <div id = "donutshop">
+            <div id = "buydonut">
+                <h2>Buy a donut</h2>
+                <br>
+                <button onclick = "yesdonut()">Yes</button>
+                <button onclick = "nodonut()">No</button>
+            </div>
+            <div id = "donutgameover">
+            <h2>GAME OVER</h2>
+            <br>
+            <i class="fas fa-angry fa-5x"></i>
+            <br>
+            <br>
+            <p>I told you to buy a donut.</p>
+            <a onclick = "location.reload()">Try again <i class="fas fa-redo" id = "redo"></i></a>
+            </div>
+            <div id = "yesdonut">
+                <h2>Eat donut.</h2>
+                <br>
+                <button onclick = "eatdonut()">You will eat it.</button>
+            </div>
+            <div id = "signup">
+                <h2>You see a sign up sheet.<br>It is for a million dollar kick.</h2>
+                <br>
+                <button onclick = "sign()" style = "height:35px;">Ok</button>
+            </div>
+            <div id = "question">
+            <h2>Will you sign it?</h2>
+            <br>
+            <button onclick = "signed()">Yes</button>
+            <button onclick = "boringending()">No</button>
+            </div>
+            <div id = "boringending">
+            <h2>BORING ENDING</h2>
+            <br>
+            <i class="fas fa-meh fa-5x"></i>
+            <br>
+            <br>
+            <p>You went home and lived a boring life.</p>
+            <a onclick = "location.reload()">Try again <i class="fas fa-redo" id = "redo"></i></a>
+            </div>
+            <div id = "gohome">
+                <h2>You go home.<br>You hope they call to say you won.</h2>
+                <br>
+                <button onclick = "homecall()" style = "height:35px;">Ok</button>
+            </div>
+            <div id = "waitforcall">
+                <h2>You get a call.<br>Will you pick up?</h2>
+                <br>
+                <button onclick = "callpickup()">Yes</button>
+                <button onclick = "callgameover()">No</button>
+            </div>
+            <div id = "callpickup">
+                <h2>YOU WERE CHOSEN!</h2>
+                <br>
+                <button onclick = "practice()" style = "height:35px;">Ok</button>
+            </div>
+            <div id = "callending">
+            <h2>BAD ENDING</h2>
+            <br>
+            <i class="fas fa-grimace fa-5x"></i>
+            <br>
+            <br>
+            <p>You thought it was a scammer. You were wrong!</p>
+            <a onclick = "location.reload()">Try again <i class="fas fa-redo" id = "redo"></i></a>
+            </div>
+            <div id = "practice">
+                <h2>Will you practice? The shot is next week.</h2>
+                <br>
+                <button onclick = "good()">Yes</button>
+                <button onclick = "bad()">No</button>
+            </div>
+            <div id = "badchoice">
+                <h2>Not smart! <i class="fas fa-smile-wink"></i></h2>
+                <br>
+                <button onclick = "shottime()" style = "height:35px;">Ok</button>
+            </div>
+            <div id = "goodchoice">
+                <h2>Smart! <i class="fas fa-smile"></i></h2>
+                <br>
+                <button onclick = "shottimegood()" style = "height:35px;">Ok</button>
+            </div>
+            <div id = "shotgood">
+                <h2>Shoot!</h2>
+                <button onclick = "shootgood()" style = "height:35px;">Ok</button>
+            </div>
+            <div id = "shotbad">
+                <h2>Shoot!</h2>
+                <button onclick = "shootbad()" style = "height:35px;">Ok</button>
+            </div>
+            <div id = "badshot">
+            <h2>HORRID ENDING</h2>
+            <br>
+            <i class="fas fa-dizzy fa-5x"></i>
+            <br>
+            <br>
+            <p>You missed and embarresed yourself infront of thousands! You should have practiced!</p>
+            <a onclick = "location.reload()">Try again <i class="fas fa-redo" id = "redo"></i></a>
+            </div>
+            <div id = "amazingshot">
+            <h2>INCREDIBLE ENDING</h2>
+            <br>
+            <i class="fas fa-grin-beam fa-5x"></i>
+            <br>
+            <br>
+            <p>You made the shot and won the million dollars!</p>
+            <a onclick = "location.reload()">Try again <i class="fas fa-redo" id = "redo"></i></a>
+            </div>
+        </div>
+        <script>
+            "use strict";function good(){document.getElementById("practice").style.display="none",document.getElementById("goodchoice").style.display="block"}function shootbad(){document.getElementById("shotbad").style.display="none",document.getElementById("badshot").style.display="block"}function shootgood(){document.getElementById("shotgood").style.display="none",document.getElementById("amazingshot").style.display="block"}function bad(){document.getElementById("practice").style.display="none",document.getElementById("badchoice").style.display="block"}function shottime(){document.getElementById("goodchoice").style.display="none",document.getElementById("badchoice").style.display="none",document.getElementById("shotbad").style.display="block"}function shottimegood(){document.getElementById("goodchoice").style.display="none",document.getElementById("badchoice").style.display="none",document.getElementById("shotgood").style.display="block"}function practice(){document.getElementById("callpickup").style.display="none",document.getElementById("practice").style.display="block"}function callpickup(){document.getElementById("waitforcall").style.display="none",document.getElementById("callpickup").style.display="block"}function callgameover(){document.getElementById("waitforcall").style.display="none",document.getElementById("callending").style.display="block"}function homecall(){document.getElementById("gohome").style.display="none",document.getElementById("waitforcall").style.display="block"}function next1(){document.getElementById("first").style.display="none",document.getElementById("bike").style.display="block"}function eatdonut(){document.getElementById("yesdonut").style.display="none",document.getElementById("signup").style.display="block"}function donut(){document.getElementById("attention").style.display="none",document.getElementById("buydonut").style.display="block"}function yesdonut(){document.getElementById("buydonut").style.display="none",document.getElementById("yesdonut").style.display="block"}function nodonut(){document.getElementById("buydonut").style.display="none",document.getElementById("donutgameover").style.display="block"}function bus(){document.getElementById("first").style.display="none",document.getElementById("bus").style.display="block"}function snitch(){document.getElementById("bus").style.display="none",document.getElementById("snitch").style.display="block"}function attentno(){document.getElementById("schoolfirst").style.display="none",document.getElementById("attentiongameover").style.display="block"}function attent(){document.getElementById("schoolfirst").style.display="none",document.getElementById("attention").style.display="block"}function busignore(){document.getElementById("bus").style.display="none",document.getElementById("busignore").style.display="block"}function schoolfirst(){document.getElementById("beforeschool").style.display="none",document.getElementById("schoolfirst").style.display="block"}function bikeignore(){document.getElementById("bike").style.display="none",document.getElementById("bikeignore").style.display="block"}function bikecry(){document.getElementById("bike").style.display="none",document.getElementById("bikecry").style.display="block"}function biketocry(){document.getElementById("bikecry").style.display="none",document.getElementById("schoolcry").style.display="block"}function bikegameover(){document.getElementById("bikecry").style.display="none",document.getElementById("bikegameover").style.display="block"}function sign(){document.getElementById("signup").style.display="none",document.getElementById("question").style.display="block"}function signed(){document.getElementById("question").style.display="none",document.getElementById("gohome").style.display="block"}function boringending(){document.getElementById("question").style.display="none",document.getElementById("boringending").style.display="block"}function closeman(){document.getElementById("instruction").style.width="0px",document.getElementById("instruction").style.opacity="0.0",document.getElementById("instruction").style.marginLeft="-100%"}
+        </script>
+    <style>
+      *{margin:0;padding:0}body{font-family:Fredoka,sans-serif;text-align:center;background-color:#87ceeb}p{width:300px;margin-left:auto;margin-right:auto}a{cursor:pointer}a:hover{text-decoration:underline}#instruction{width:100%;height:999vh;position:fixed;color:#fff;transition:all 1s;background-color:#000;}button{width:150px;height:150px;margin:10px;cursor:pointer;font-size:15px;border-radius:55px;outline:0;border:transparent;font-family:Fredoka,sans-serif;transition:all .5s}button:hover{background-color:#add8e6;opacity:.85}img{width:275px;height:250px;margin-left:auto;margin-right:auto}#redo{color:#000;animation:spin infinite 2s}#ball{transition:all 1s;position:fixed}@keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}button:active{transform:scale(3);opacity:0}#amazingshot,#attention,#attentiongameover,#badchoice,#badshot,#bike,#bikecry,#bikegameover,#bikeignore,#boringending,#bus,#busignore,#buydonut,#callending,#callpickup,#donutgameover,#gohome,#goodchoice,#practice,#question,#schoolcry,#schoolfirst,#shotbad,#shotgood,#signup,#snitch,#waitforcall,#yesdonut{display:none}
+    </style>
+	</body>
+</html>
