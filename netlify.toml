@@ -3,6 +3,8 @@
     [headers.values]
         X-XSS-Protection = "1;mode=block"
         X-Frame-Options = "DENY"
+        X-Content-Type-Options = "nosniff"
+        Referrer-Policy = "no-referrer"
         Cross-Origin-Embedder-Policy = "require-corp"
         Cross-Origin-Opener-Policy = "same-origin"
         Cross-Origin-Resource-Policy = "same-origin"
